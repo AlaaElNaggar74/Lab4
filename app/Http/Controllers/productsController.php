@@ -17,7 +17,9 @@ class productsController extends Controller
     {
         // $this->middleware('auth');
         $this->middleware('auth')->only(['store']);
-        $this->middleware('CheckName')->only(['store']);
+        // $this->middleware('CheckName')->only(['store']);
+        $this->middleware('CheckName')->only(['form_input','store']);
+
     }
 
 
